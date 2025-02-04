@@ -2,7 +2,7 @@
 title: "My Japan Itinerary"
 date: "2025-01-15"
 category: "travel"
-image: "/../public/events/tea_party_cover.jpg"
+image: "/events/tea_party_cover.jpg"
 tags: ["Japan", "itinerary", "Tokyo", "Kyoto"]
 ---
 

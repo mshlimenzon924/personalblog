@@ -7,6 +7,10 @@ export function getPosts() {
     return files.map((filename) => {
         const fileContent = fs.readFileSync(path.join("content", filename), "utf-8");
         const { data } = matter(fileContent);
-        return { ...data, slug: filename.replace(".md", ""),image: data.image || "/../public/default.jpg"};
+        return {
+            ...data,
+            slug: filename.replace(".md", ""),
+            image: data.image || "/default.jpg"
+        };
     });
 }
