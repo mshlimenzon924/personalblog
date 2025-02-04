@@ -1,7 +1,7 @@
 # **My Personal Blog**
 A **Next.js-based personal blog** where I share posts about **travel, lifestyle, events, and food**. The blog features a **clean UI**, categorized posts, and a modern aesthetic.
 
-### **🌍 Live Website:** [Link Here](https://your-vercel-link.vercel.app)
+### **🌍 Live Website:** [Link Here](https://personalblog-omega-umber.vercel.app/)
 
 ## **🚀 Features**
 - **Home Page**: Displays recent blog posts and a summary about me.
