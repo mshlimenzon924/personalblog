@@ -1,6 +1,6 @@
 ---
 title: "Winter Lifestyle Routine"
-date: "2025-01-05"
+date: "2025-01-10"
 category: "lifestyle"
 image: "/events/tea_party_cover.jpg"
 tags: ["self-care", "winter", "cozy"]
