@@ -128,3 +128,16 @@ h2 {
     color: #777;
     margin-bottom: 15px;
 }
+
+.blog-content img {
+    width: 175px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
