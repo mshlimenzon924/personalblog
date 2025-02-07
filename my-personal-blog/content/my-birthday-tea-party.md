@@ -1,6 +1,6 @@
 ---
 title: "My Birthday Tea Party"
-date: "2025-01-01"
+date: "2025-02-06"
 category: "events"
 image:  "/events/tea_party_cover.jpg"
 tags: ["tea party", "birthday", "celebration"]

@@ -141,3 +141,16 @@ h2 {
     margin-bottom: 15px;
     line-height: 1.6;
 }
+.blog-content ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 20px; /* Ensures proper indentation */
+}
+
+.blog-content ol {
+    list-style-type: decimal; /* Adds numbering for ordered lists */
+    padding-left: 20px;
+}
+
+.blog-content li {
+    margin-bottom: 8px; /* Adds spacing between list items */
+}

@@ -1,21 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../components/Header";
 import { getPosts } from "../utils/getPosts";
 
 export default function Home({ posts }) {
     return (
         <div className="min-h-screen bg-gradient-to-b from-[#fdf5e6] to-[#fbe2c6] text-gray-900">
-            
-            {/* Navbar */}
-            <header className="bg-[#C14469] py-4 shadow-md">
-                <div className="container mx-auto flex justify-center space-x-8">
-                    <Link href="/" className="text-white font-semibold text-lg hover:opacity-80">Home</Link>
-                    <Link href="/travel" className="text-white font-semibold text-lg hover:opacity-80">Travel</Link>
-                    <Link href="/events" className="text-white font-semibold text-lg hover:opacity-80">Events</Link>
-                    <Link href="/lifestyle" className="text-white font-semibold text-lg hover:opacity-80">Lifestyle</Link>
-                </div>
-            </header>
-
+            <Header />
             {/* Bio Section */}
             <section className="flex flex-col items-center py-10">
                 <div className="bg-white shadow-lg rounded-xl p-8 max-w-3xl w-full text-center">

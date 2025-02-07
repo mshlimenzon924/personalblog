@@ -12,12 +12,14 @@ export default function BlogPost({ post }) {
     if (router.isFallback) return <p>Loading...</p>;
 
     return (
-        <div className="bg-creamMain min-h-screen text-gray-900">
+        <div className="bg-[#f8e6d1] min-h-screen text-gray-900">
             <Header />
-            <main className="max-w-4xl mx-auto p-8">
-            <h1 className="text-5xl font-bold text-pink-800 mb-4">{post.title}</h1>
+            <main className="max-w-4xl mx-auto p-6">
+            <div className="bg-white shadow-lg rounded-lg p-8">
+            <h1 className="text-4xl font-bold text-[#861845]">{post.title}</h1>
             <p className="blog-date">{post.date}</p>
-            <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div className="blog-content mt-6" dangerouslySetInnerHTML={{ __html: post.content }} />
+            </div>
             </main>
         </div>
     );

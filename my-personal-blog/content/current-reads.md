@@ -1,8 +1,8 @@
 ---
-title: "My Current Reads"
-date: "2025-02-06"
+title: "My Current Reads (February)"
+date: "2025-02-02"
 category: "lifestyle"
-image: "/lifestyle/bookclub.jpg"
+image: "/lifestyle/books/bookclub.jpg"
 tags: ["books", "reading", "literature", "book club"]
 ---
 
@@ -17,18 +17,18 @@ The club meets **monthly** to discuss a selected book, diving into its themes an
 
 This month, our book club is reading *My Year of Rest and Relaxation*, a novel about a woman who, disillusioned with life, attempts to **sleep for an entire year** through a carefully crafted regimen of medications. It’s a dark, introspective read that explores themes of **escapism, privilege, and self-destruction**—perfect for thought-provoking discussion.
 
-![My Year of Rest and Relaxation](/lifestyle/my-year-of-rest-and-relaxation.jpg)
+![My Year of Rest and Relaxation](/lifestyle/books/my-year-of-rest-and-relaxation.jpg)
 
 ## **Other Books on My Shelf**
 Aside from our book club selection, I’m currently juggling a few other books:
 
 📖 **Bel Canto by Ann Patchett** – A fascinating novel exploring the unexpected relationships that form between a group of hostages and their captors, including high-profile executives and politicians.
 
-![Bel Canto](/lifestyle/bel-canto.jpg)
+![Bel Canto](/lifestyle/books/bel-canto.jpg)
 
 📖 **Good Omens by Neil Gaiman & Terry Pratchett** – A fast-paced, comedic take on the apocalypse, filled with quirky characters and dark humor. After spending months reading *Crime and Punishment*, I needed something lighthearted—and *Good Omens* is the perfect antidote.
 
-![Good Omens](/lifestyle/good-omens.jpg)
+![Good Omens](/lifestyle/books/good-omens.jpg)
 
 ## **Building My Japan Travel Reading List**
 With my upcoming **trip to Japan**, I’m preparing for a **lot of time in transit**—roughly **2.5 hours of travel per day**. That means I’ll need a solid lineup of books to keep me entertained on long train rides.
@@ -37,7 +37,7 @@ I haven’t finalized my reading list yet, but I’m looking for **engaging, fas
 
 ---
 
-### **Final Thoughts**
+## **Final Thoughts**
 Books have always been my favorite way to **transport myself somewhere else**—whether it’s stepping into the mind of a complex character or immersing myself in a different time period or culture. A great story can **shift your perspective**, spark new ideas, and introduce ways of thinking you never considered before.
 
 Let me know what you're reading this month! 💬

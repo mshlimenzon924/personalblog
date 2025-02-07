@@ -1,14 +1,16 @@
 import Link from "next/link";
 
-export default function Header() {
+const Header = () => {
     return (
-    <header className="bg-gradient-to-r from-pink-700 to-pink-900 py-5 shadow-lg">
-        <nav className="flex justify-center gap-10 text-white text-lg font-semibold tracking-wide">
-            <Link href="/">Home</Link>
-            <Link href="/travel">Travel</Link>
-            <Link href="/events">Events</Link>
-            <Link href="/lifestyle">Lifestyle</Link>
+        <nav className="bg-gradient-to-r from-[#bd185d] to-[#861845] p-4 shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-center space-x-8">
+            <Link href="/" className="text-white text-lg font-medium hover:opacity-80 transition">Home</Link>
+            <Link href="/travel" className="text-white text-lg font-medium hover:opacity-80 transition">Travel</Link>
+            <Link href="/events" className="text-white text-lg font-medium hover:opacity-80 transition">Events</Link>
+            <Link href="/lifestyle" className="text-white text-lg font-medium hover:opacity-80 transition">Lifestyle</Link>
+        </div>
         </nav>
-    </header>
     );
-}
+    };
+
+export default Header;
