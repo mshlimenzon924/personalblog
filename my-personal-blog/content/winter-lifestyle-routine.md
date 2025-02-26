@@ -12,12 +12,12 @@ tags: ["self-care", "fitness", "mental health", "winter", "seasonal depression"]
 
 ☁️ **Winter in California is weird**—we’re not used to rain and cold, and **seasonal depression can hit hard**. That’s why I focus on **cozy habits, movement, and serotonin boosters** to make winter feel ✨ magical.
 
+![Winter Life Style](/lifestyle/winter-routine/winter-self-care.jpg)
+
 ---
 
 ## ❄️☀️ **Morning Routine - Energize & Refresh** 🏋️‍♀️💪  
 ---
-
-![Good Morning!](/lifestyle/winter-routine/morning.jpg)
 
 🌅 **Getting up is always the easiest part of the day** – As a morning person, I love starting my day early, especially since I have a **morning workout planned**.
 
@@ -30,7 +30,7 @@ Even when it’s cold, working out **kickstarts energy & mood**! Choose what wor
 
 🎿 **Winter sports season!** – If possible, hit the ski slopes, go ice skating, or take a fun day trip to the mountains.
 
-![Ice Skating](/lifestyle/winter-routine/ice-skating.jpg)  
+![Ice Skating](/lifestyle/winter-routine/ice-skating.jpg)
 
 💧 **Hydrate first thing** – Cold air = **drier skin and dehydration**.
 - Start your morning with **warm lemon water 🍋** or an **electrolyte drink**.  

@@ -1,34 +1,60 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+/* Playfair Display = use for titles and important text elements */
+/* Poppins = use for body text and buttons */
+
+/* Color Scheme:
+    Primary Colors -
+    Deep Rose (#C51E5A) = Primary Accent, use for interactive elements that require user engangement
+    Deep Burgundy (#7A1B3D) =  Navbar, footer, major section dividers (good over white text since high readibility)
+    Blush Pink (#F5A9A0) - Soft accents (subtle dividers, underlines, UI highlights)
+
+    Secondary Colors -
+    Muted Sage (#92AE9B) - Callout sections, buttons, and subtle UI details
+    Soft Green (#7EA28F) - Alternative highlights (for text accents, category badges, and backgrounds)
+    Taupe (#B89B8A) - Blog post containers, blog post previews, section dividers, secondary background sections
+    Warm Mocha (#A08372) - Subtle outlines, UI shadows, soft borders, card shadows, thin outlines, subheadings (good alternative to pure gray)
+
+    Neutral Background Colors -
+    Soft Cream (#F7DDC8) - Main background color
+    Ivory (#FDF5E6) - Alternative background color for cards, dividers, and contrast sections (softer than pure white, easier on eyes)
+
+    Dark Contrast Colors (Text & Legibility)
+    Espresso Brown (#362A25) - Main text color (warmer than black, softer contrast)
+    Deep Cocoa (#6D4C3D) - Secondary text, subtitles, small interactive elements
+*/
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 /* Global Styling */
+
+/* Defining Color Scheme */
+:root {
+    --primary-accent: #C51E5A; /* Deep Rose */
+    --primary-dark: #7A1B3D; /* Burgundy */
+    --highlight-pink: #F5A9A0; /* Blush Pink */
+    
+    --secondary-green: #92AE9B; /* Muted Sage */
+    --secondary-green-alt: #7EA28F; /* Soft Green */
+    --secondary-taupe: #B89B8A; /* Taupe */
+    --secondary-mocha: #A08372; /* Warm Mocha */
+    
+    --background-light: #FDF5E6; /* Ivory */
+    --background-cream: #FBE2C6; /* Soft Cream */
+
+    --text-main: #362A25; /* Espresso Brown */
+    --text-secondary: #6D4C3D; /* Deep Cocoa */
+}
+
 body {
-    background: linear-gradient(180deg, #fdf5e6, #fbe2c6);
+    background: var(--background-cream);
     font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar */
-header {
-    background: linear-gradient(135deg, #B44569, #8A2E52); /* Gradient for elegance */
-    padding: 18px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    color: #FFD1DC;
-}
 
 /* Blog Titles & Text */
 h1, h2, h3 {
@@ -38,14 +64,70 @@ h1, h2, h3 {
 h1 {
     font-size: 42px;
     font-weight: 700;
-    color: #8A2E52;
+    color: var(--primary-dark);
     text-align: center;
 }
 
 h2 {
     font-size: 32px;
     font-weight: 600;
-    color: #5A5A5A;
+    color: var(--secondary-mocha);
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--secondary-taupe);
+}
+
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-accent), var(--primary-dark)); /* #B44569, #8A2E52  #C51E5A,#7A1B3D */
+    padding: 18px 0;
+    box-shadow: 0 4px 6px var(--secondary-mocha);
+}
+
+.nav-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--background-light);
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--background-cream); /* Light pink hover effect */
+    transform: scale(1.05);
+}
+
+/* Bio Section */
+.bio-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--background-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--secondary-mocha);
+}
+
+.bio-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #3B2C2F;
 }
 
 .bio-card {
@@ -54,14 +136,10 @@ h2 {
     padding: 20px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px var(--secondary-mocha);
 }
 
-.bio-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #3d3d3d;
-}
+
 .bio-heading {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
@@ -70,11 +148,9 @@ h2 {
 }
 
 .bio-image {
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
     border: 4px solid #FA9DA6;
-    padding: 5px;
+    padding: 7px;
     display: block;
     margin: 0 auto;
 }
@@ -82,10 +158,10 @@ h2 {
 
 /* Blog Previews */
 .blog-card {
-    background: white;
+    background: var();
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px var(--secondary-mocha);
     transition: all 0.3s ease-in-out;
     height: 300px; /* Ensure equal size */
     display: flex;
@@ -130,11 +206,31 @@ h2 {
 }
 
 .blog-content img {
-    width: 175px;
-    height: auto;
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Preserves the aspect ratio */
     display: block;
-    margin: 15px auto;
-    border-radius: 8px;
+    margin: 20px auto;
+    border-radius: 12px;
+    object-fit: cover; /* Ensures the image fills its container while keeping a good crop */
+}
+
+.blog-image-banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-image {
+    width: 90%; /* Wider for horizontal images */
+    max-height: 300px;
+}
+
+.vertical-image {
+    width: 60%; /* Narrower for vertical images */
+    max-height: 400px;
 }
 
 .blog-content p {
@@ -153,4 +249,88 @@ h2 {
 
 .blog-content li {
     margin-bottom: 8px; /* Adds spacing between list items */
+}
+
+
+/* Bio Section */
+.bio-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #3B2C2F;
+}
+
+/* Clothesline Blog Post Grid */
+.clothesline-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 50px 0;
+}
+
+.clothesline {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 2px;
+    background-color: #B89B8A;
+    transform: translateX(-50%);
+}
+
+.clothesline-item {
+    position: relative;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.clothesline-item:hover {
+    transform: scale(1.05);
+}
+
+/* Clothespin */
+.pin {
+    width: 6px;
+    height: 18px;
+    background: #D4A59A;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Polaroid Image */
+.clothesline-item img {
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Title Section */
+.title-section {
+    background: white;
+    padding: 8px 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #3B2C2F;
+    text-transform: uppercase;
 }
