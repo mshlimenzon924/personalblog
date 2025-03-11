@@ -11,7 +11,7 @@
 
     Secondary Colors -
     Muted Sage (#92AE9B) - Callout sections, buttons, and subtle UI details
-    Soft Green (#7EA28F) - Alternative highlights (for text accents, category badges, and backgrounds)
+    Dark Green (#6C9983) - Alternative highlights (for text accents, category badges, and backgrounds)
     Taupe (#B89B8A) - Blog post containers, blog post previews, section dividers, secondary background sections
     Warm Mocha (#A08372) - Subtle outlines, UI shadows, soft borders, card shadows, thin outlines, subheadings (good alternative to pure gray)
 
@@ -39,12 +39,13 @@
     --highlight-pink: #F5A9A0; /* Blush Pink */
     
     --secondary-green: #92AE9B; /* Muted Sage */
-    --secondary-green-alt: #7EA28F; /* Soft Green */
+    --secondary-green-alt: #6C9983; /* Dark Green */
     --secondary-taupe: #B89B8A; /* Taupe */
     --secondary-mocha: #A08372; /* Warm Mocha */
     
+    --background-white: #FFFCF6; /* White */
     --background-light: #FDF5E6; /* Ivory */
-    --background-cream: #FBE2C6; /* Soft Cream */
+    --background-cream: #FDE7CD; /* Soft Cream */
 
     --text-main: #362A25; /* Espresso Brown */
     --text-secondary: #6D4C3D; /* Deep Cocoa */
@@ -54,7 +55,6 @@ body {
     background: var(--background-cream);
     font-family: 'Poppins', sans-serif;
 }
-
 
 /* Blog Titles & Text */
 h1, h2, h3 {
@@ -74,31 +74,56 @@ h2 {
     color: var(--secondary-mocha);
 }
 
-h2 {
+h3 {
     font-size: 22px;
     font-weight: 500;
     color: var(--secondary-taupe);
 }
 
-
 /* Navbar */
 .navbar {
     background: linear-gradient(135deg, var(--primary-accent), var(--primary-dark)); /* #B44569, #8A2E52  #C51E5A,#7A1B3D */
-    padding: 18px 0;
+    padding: 15px 0;
     box-shadow: 0 4px 6px var(--secondary-mocha);
+    margin-bottom: 20px;
 }
 
-.nav-container {
-    max-width: 1120px;
-    margin: 0 auto;
+.navbar-container {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    padding-right: 5px;
+    border-radius: 50%;
+}
+
+.brand-name {
+    width: 250px;
+    height: 60px;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    padding-right: 40px;
 }
 
 .nav-link {
     color: var(--background-light);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     padding: 10px 20px;
@@ -111,49 +136,191 @@ h2 {
     transform: scale(1.05);
 }
 
+.photo-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    padding: 0;
+    margin: 0;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.title-container {
+    position: absolute;
+    top: 140px;
+    left: 53%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.menu-title {
+    width: 500px;
+    height: auto;
+    image-rendering: high-quality;
+}
+
+
+
+
+
+
+
+
+
+/* new temporary bio section */
+.bio-section_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px auto 20px auto; /* Adds spacing below navbar, above vision board */
+    text-align: center;
+}
+
+.bio-image_2 {
+    max-width: 900px; /* Adjust as needed */
+    width: 90%; /* Ensures responsiveness */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centers image */
+}
+
+
+/* COME BACK CAUSE I HATE IT */
 /* Bio Section */
 .bio-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: var(--background-light);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px var(--secondary-mocha);
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 35px;
+    background: var(--background-white); /* Soft warm tint */
+    border-radius: 16px;
+    box-shadow: 0 8px 20px var(--secondary-mocha); /* Softer shadow */
+    display: flex;
 }
 
-.bio-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #3B2C2F;
+/* Profile Image */
+.bio-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--highlight-pink); /* Soft pink border */
+    padding: 3px;
+    box-shadow: 0 4px 15px var(--secondary-mocha);
 }
 
+/* Text Styling */
 .bio-card {
-    max-width: 750px;
-    margin: auto;
+    background: var(--background-white);
     padding: 20px;
-    background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 10px var(--secondary-mocha);
+    box-shadow: 0 5px 20px var(--secondary-mocha);
+    width: 100%;
+    max-width: 600px;
 }
-
 
 .bio-heading {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: #C14469;
+    color: #A45A68; /* Romantic rose */
+    text-align: left;
+    margin-bottom: 10px;
 }
 
-.bio-image {
-    border-radius: 50%;
-    border: 4px solid #FA9DA6;
-    padding: 7px;
-    display: block;
-    margin: 0 auto;
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
 }
+
+/* Vision Board */
+.vision-board-container {
+    display: flex;
+    justify-content: center; /* Centers the vision board */
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Vision Board PNG (Foreground) */
+.vision-board {
+    width: 80vw; /* Adjust size to fit without being too large */
+    max-width: 900px;
+    height: auto;
+    object-fit: cover; /* Prevents weird scaling */
+    image-rendering: crisp-edges; /* Enhances clarity */
+    image-rendering: -webkit-optimize-contrast;
+    margin: 20px auto 40px auto; 
+}
+
+/* Polaroid Styling */
+.polaroid-link {
+    position: absolute;
+    width: 200px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+/* Polaroid Frame */
+.polaroid-frame {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+/* Polaroid Image (Underneath the Frame) */
+.polaroid-image {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Caption Text */
+.caption {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    color: #5a3e36;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+/* Decorative Elements */
+.decorative-element {
+    position: absolute;
+    width: 80px;
+    z-index: 4;
+}
+
+
 
 
 /* Blog Previews */
@@ -251,74 +418,6 @@ h2 {
     margin-bottom: 8px; /* Adds spacing between list items */
 }
 
-
-/* Bio Section */
-.bio-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.bio-text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #3B2C2F;
-}
-
-/* Clothesline Blog Post Grid */
-.clothesline-container {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    padding: 50px 0;
-}
-
-.clothesline {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 80%;
-    height: 2px;
-    background-color: #B89B8A;
-    transform: translateX(-50%);
-}
-
-.clothesline-item {
-    position: relative;
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.clothesline-item:hover {
-    transform: scale(1.05);
-}
-
-/* Clothespin */
-.pin {
-    width: 6px;
-    height: 18px;
-    background: #D4A59A;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 3px;
-}
-
-/* Polaroid Image */
-.clothesline-item img {
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* Post Title Section */
 .title-section {

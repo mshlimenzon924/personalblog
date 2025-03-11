@@ -4,7 +4,7 @@ import { getPosts } from "../utils/getPosts";
 
 export default function Lifestyle({ posts }) {
     return (
-        <div className="bg-creamMain min-h-screen text-gray-900">
+        <div className="body">
             <Header />
             <main className="max-w-6xl mx-auto p-6">
                 <h1 className="text-5xl font-bold text-[#861845] mb-4">🌿 Living My Best Life</h1>

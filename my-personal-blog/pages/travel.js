@@ -1,27 +1,24 @@
-import BlogPreview from "../components/BlogPreview";
+import Image from 'next/image';
 import Header from "../components/Header";
-import { getPosts } from "../utils/getPosts";
 
-export default function Travel({ posts }) {
+export default function Travel() {
     return (
-        <div className="bg-creamMain min-h-screen text-gray-900">
+        <div className="body">
             <Header />
-            <main className="max-w-6xl mx-auto p-6">
-                <h1 className="text-5xl font-bold text-[#861845] mb-4">🌍 Travel Diaries</h1>
-                <p className="text-lg text-gray-700 mb-6">Adventures, itineraries, and unforgettable experiences.</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {posts.length > 0 ? (
-                        posts.map((post) => <BlogPreview key={post.slug} {...post} />)
-                    ) : (
-                        <p className="text-gray-600">No posts available in this category yet.</p>
-                    )}
+            <div className="photo-menu">
+                <div className="top-section">
+                    <Image src="/photo_menu/top.png" alt="Top Section" width={800} height={400} className="menu-image" />
+                    <div className="title-container">
+                        <Image src="/photo_menu/travel.png" alt="Travel Diaries Title" width={350} height={100} className="menu-title" />  
+                    </div>
                 </div>
-            </main>
+                <div className="middle-section">
+                    <Image src="/photo_menu/middle.png" alt="Middle Section" width={800} height={400} className="menu-image" />
+                </div>
+                <div className="bottom-section">
+                    <Image src="/photo_menu/bottom.png" alt="Bottom Section" width={800} height={400} className="menu-image" />
+                </div>
+            </div>
         </div>
-    );
-}
-
-export async function getStaticProps() {
-    const posts = getPosts().filter((post) => post.category?.toLowerCase() === "travel");
-    return { props: { posts } };
-}
+    )
+};
